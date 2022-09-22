@@ -22,3 +22,5 @@ Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 Route::get('/about/{user}', [AboutController::class, 'show'])->name('about.show');
 
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::post('/categories/create', [CategoryController::class, 'store']);
