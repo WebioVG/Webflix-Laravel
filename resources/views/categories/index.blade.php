@@ -10,11 +10,17 @@
         <tr class="font-semibold text-center border-b border-black">
             <td class="mx-3 inline-block">ID</td>
             <td>Name</td>
+            <td>Actions</td>
         </tr>
         @foreach ($categories as $category)
             <tr class="border-b">
                 <td class="mx-3 inline-block">{{ $category->id }}</td>
                 <td>{{ $category->name }}</td>
+                <td>
+                    <a class="text-blue-600" href="{{ route('categories.edit', $category->id) }}">Edit</a>
+                     | 
+                    <a class="text-blue-600" href="#">Remove</a>
+                </td>
             </tr>
         @endforeach
     </table>

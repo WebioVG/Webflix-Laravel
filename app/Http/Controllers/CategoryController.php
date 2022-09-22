@@ -35,4 +35,28 @@ class CategoryController extends Controller
 
         return redirect()->route('categories.index');
     }
+
+    public function edit($id)
+    {
+        $category = Category::findOrFail($id);
+
+        return view('categories.edit', [
+            'category' => $category
+        ]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $category = Category::findOrFail($id);
+
+        $request->validate([
+            'name' => 'required|min:3|unique:categories,name,'.$id
+        ]);
+
+        $category->update([
+            'name' => $request->name
+        ]);
+
+        return redirect()->route('categories.index');
+    }
 }

@@ -24,3 +24,5 @@ Route::get('/about/{user}', [AboutController::class, 'show'])->name('about.show'
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
 Route::post('/categories/create', [CategoryController::class, 'store']);
+Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+Route::put('/categories/{id}/edit', [CategoryController::class, 'update']);
