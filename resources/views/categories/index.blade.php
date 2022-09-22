@@ -19,7 +19,12 @@
                 <td>
                     <a class="text-blue-600" href="{{ route('categories.edit', $category->id) }}">Edit</a>
                      | 
-                    <a class="text-blue-600" href="#">Remove</a>
+                    <form class="inline" action="{{ route('categories.delete', $category->id) }}" method="post">
+                        @csrf
+                        @method('delete')
+                        
+                        <button class="text-blue-600">Remove</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
