@@ -18,11 +18,11 @@
             <h1 class="text-3xl font-bold mr-10">Webflix Laravel</h1>
             <nav>
                 <ul class="flex gap-5 text-lg">
-                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="{{ route('home') }}">Home</a></li>
-                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="#">Categories</a></li>
+                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="{{ route('home.index') }}">Home</a></li>
+                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="{{ route('categories.index') }}">Categories</a></li>
                     <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="#">Movies</a></li>
                     <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="#">Actors</a></li>
-                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="{{ route('about') }}">About</a></li>
+                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="{{ route('about.index') }}">About</a></li>
                 </ul>
             </nav>
             <div class="flex grow justify-end gap-5 text-lg">
