@@ -22,7 +22,7 @@
                     <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="#">Categories</a></li>
                     <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="#">Movies</a></li>
                     <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="#">Actors</a></li>
-                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="#">About</a></li>
+                    <li><a class="inline-block border-b-2 border-white hover:border-slate-500" href="{{ route('about') }}">About</a></li>
                 </ul>
             </nav>
             <div class="flex grow justify-end gap-5 text-lg">
@@ -31,7 +31,7 @@
             </div>
         </header>
 
-        <main class="my-5">
+        <main class="my-5 px-5">
             @yield('content')
         </main>
 

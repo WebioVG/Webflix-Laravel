@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('title')
-    À propos - @parent
+    Home - @parent
 @endsection
 
 @section('content')
