@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,7 @@ Route::post('/categories/create', [CategoryController::class, 'store']);
 Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
 Route::put('/categories/{id}/edit', [CategoryController::class, 'update']);
 Route::delete('/categories/{id}/delete', [CategoryController::class, 'delete'])->name('categories.delete');
+
+Route::get('/movies', [MovieController::class, 'index'])->name('movies.index');
+Route::get('/movies/create', [MovieController::class, 'create'])->name('movies.create');
+Route::post('/movies/create', [MovieController::class, 'store']);

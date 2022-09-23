@@ -30,7 +30,6 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->created_at = new DateTime();
         $category->updated_at = new DateTime();
-        $category->name = $request->name;
         $category->save();
 
         return redirect()->route('categories.index');
